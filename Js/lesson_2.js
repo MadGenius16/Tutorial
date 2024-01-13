@@ -113,5 +113,44 @@ convertToInt('25.7px')   // 26
 convertToInt('100.5px')   // 101
 convertToInt('35.2px')   // 35
 
-
 const newHeight =  convertToInt('25.7px') + 5;
+
+
+
+
+function calcBMI(weight, height) {
+  
+// 1. знайти і замінити кому"," на крапку.
+//    (через метод replace)
+
+// 2. перетворюємо строку в число 
+// ( приклад методом Number або parseFloat() )
+
+// 3. рахуємо та округлити результат до однієї цифри після коми
+
+// 1. крок
+weight = weight.replace(",", ".")
+height = height.replace(",", ".")
+
+console.log(weight, height)
+
+// 2. крок
+weight = Number(weight);
+height = Number(height);
+
+console.log(weight, height)
+
+// 3. крок
+
+const result = weight / (height * height)
+
+console.log(Number(result.toFixed(1)))
+
+// метод toFixed округлює число, але повертає рядок(string)
+// тому додаємо на Number 
+
+return Number(result.toFixed(1))
+}
+
+const bmi = calcBMI('88,3', '1.75')
+console.log(bmi); 

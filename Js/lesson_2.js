@@ -43,7 +43,75 @@ console.log(NaN == NaN);  // false
 console.log(NaN === NaN);  // false 
 console.log(isNaN(NaN));  // true 
 
+// Перетворення на числа 
+
+// Number.parseInt
+
+let elementHeight = '20px';
+elementHeight = Number.parseInt(elementHeight);
+console.log(elementHeight);
+
+// Number.parseFloat
+
+let elementWidth = '200.5px';
+elementWidth = Number.parseFloat(elementWidth);
+console.log(elementWidth);
+
+// Округлення
+
+const value = 27.5;
+console.log(Math.floor(value)); // округл. вниз 
+console.log(Math.ceil(value));  // округл. вгору
+console.log(Math.round(value)); // округл. звичайн. правил.
+
+// ФУНКЦІЇ
+// () список параметров
+// {} тело фунции
+
+function displayMsg(){
+  console.log('hello World!!!')
+}
+
+displayMsg();
+displayMsg();
+displayMsg();
+
+function greeting(username) {
+  console.log(`Hello, ${username}!`);
+}
+
+greeting('Dima');
+greeting('Alice');
+greeting('John');
+
+// Кожна функція в джс повинна щось повертати, 
+// за замовч. усі функції повертають undefined
+
+function sum(a, b) {
+  const result = a + b;
+
+  // оператор return:
+  // 1. Зупиняє виконання функціі і виходить з неї,
+  // 2. Повернення результату роботи фнкції в місці її викл.
+
+  return result;
+}
+
+console.log(sum(5, 9));
+console.log(sum(50, 90));
+
+function convertToInt(string) {
+  const number = Number.parseFloat(string);
+  const result = Math.round(number);
+  console.log(result);
+
+  return result;
+
+}
+
+convertToInt('25.7px')   // 26
+convertToInt('100.5px')   // 101
+convertToInt('35.2px')   // 35
 
 
-
-
+const newHeight =  convertToInt('25.7px') + 5;

@@ -123,18 +123,58 @@ function getTextBeforeDivider(text, divider) {
 const firstNAme = '    John    '
 console.log(`Hello ${firstNAme.trim()}!`)
 
+console.log('===============')
 
 
+// напиши цикл for вивести цифри за зрост. від a до b, але кратно 5
 
 
+const a=100;
+const b=20;
 
+// for (let i=b; i<=a; i+=5) {
+//   console.log(i);
+// }
 
+// або
+// нижче цикл з превіркою на кратність, більш правильний варіант
 
+for (let i=b; i<=a; i+=1) {
+  if(i % 5 === 0){
+    console.log(i);
+  }
+}
+console.log('=========')
+// break
 
+for(let i=0; i<=10; i+=1) {
+  if(i===5){
+    break; // код далі не йде, цикл зупиняє роботу
+  }
+  console.log(i)
+}
+console.log('=========')
+//continue
 
+for(let i=0; i<=7; i+=1) {
+  if(i===5){
+    continue; // перескакуєм на наступну ітерацію. оператор пропуску ітераціі
+  }
+  console.log(i)
+}
 
+// ЗАДАЧА. ... підрахувати сумму всіх парних чисел, від min до max, 
 
+const min=5;
+const max=15;
+let total=0;
 
+for(let i=min; i<=max; i+=1){
+  if(i % 2===0 && i!==0) {
+    console.log('Even:', i);
+    total+=i;
+  }
+}
 
-
+console.log(`TOTAL: ${total}`);
 

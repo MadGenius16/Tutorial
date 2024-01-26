@@ -87,10 +87,84 @@ for (let i = 0; i < fruits.length; i += 1) {
   console.log(`${i + 1}: ${fruits[i]}`);
 }
 
+// підрахувати суму всіх парних чисел у масиві
+
+const numbers = [1, 5, 8, 9, 12, 4, 15, 30, 18, 14, 27]
+let total= 0;
+for (const number of numbers) {
+  if (number % 2 ===0) {
+    total+=number
+    console.log(number)
+  }
+}
+console.log('total:', total)
 
 
+/**
+ * Напиши скрипт, який виводить у консоль ім'я та телефонний номер користувача.
+ * У змінних names та phones зберігаються рядки імен та телефонних номерів,
+ * розділені комами. Порядковий номер імен та телефонів у рядках вказують на
+ * відповідність. Кількість імен та телефонів гарантовано однакова.
+ */
 
+const names = "Jacob,William,Solomon,Artemis";
+const phones = "89001234567,89001112233,890055566377,890055566300";
 
+displayAllPhonebookInfo(names, phones)
 
+function displayAllPhonebookInfo(names, phones) {
+  const namesArr = names.split(',')
+  const phonesArr = phones.split(',')
 
+  for(let i=0; i < namesArr.length; i+=1) {
+    console.log(`${namesArr[i]}-${phonesArr[i]}`)
+  }
+}
+
+/**
+ * Напиши скрипт, який виводить у консоль усі слова рядка
+ * крім першого і останнього. Результуючий рядок не повинен починатися
+ * або закінчуватися символ пробілу.
+ * Скрипт повинен працювати для будь-якого рядка.
+ */
+
+const string = "Welcome to the future";
+
+console.log(cutString(string));
+console.log(cutString("Hello everyone! I'm here!"));
+
+function cutString(string) {
+  const stringArr = string.split(' ')  // робимо з рядка масив 
+  const cuttedString = stringArr.slice(1, stringArr.length-1)  // копіюємо частину масиву без першого і остан.
+  const result = cuttedString.join(' ').trim() // збираємо масив у рядок(поєднувач між єлементам пробіл)
+// та убираємо зайві пробіли на початку і у кінці рядка
+  return result
+  
+}
+
+/**
+ * Напиши скрипт пошуку найменшого числа у масиві. Код повинен працювати
+ * для будь-якого масиву чисел. Використовуй цикл для розв'язання задачі.
+ */
+
+ const value = [2, 17, 94, 1, 23, 37];
+ console.log(findMin(value))
+
+function findMin(value){
+
+// 1. задаємо в якості min перший елемент масиву
+// 2. запускаємо цикл на перебір масиву(починаючи з другого елем., перший ми вже використали)
+// 3. порівняти поточне min знач з поточним елем масиву, якщо поточний елемент менший за min 
+// то він стає min
+
+let min = value[0];  // перший крок , перший елем масиву value[0]
+
+  for(let i=1; i<value.length; i+=1){
+    // другий крок, якщо поточний елем масиву менший за min
+    if(value[i]<min) {
+      min = value[i] // ТРЕТІЙ крок , то задаємо поточний елем масиву в якості min
+    }
+  } 
+return min
+}
 

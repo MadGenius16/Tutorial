@@ -159,3 +159,8 @@ console.log(account.getTransactionDetails(1));
 console.log(account.getTransactionTotal(TRANSACTIONS.DEPOSIT));
 console.log(account.getTransactionTotal(TRANSACTIONS.WITHDRAW));
 console.log(account);
+
+
+
+
+

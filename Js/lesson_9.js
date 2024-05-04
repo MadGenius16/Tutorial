@@ -235,19 +235,19 @@ class User {
   }
 }
 
-const mango = new User({
-  login: "Mango",
-  email: "mango@dog.woof",
-});
+// const mango = new User({
+  // login: "Mango",
+  // email: "mango@dog.woof",
+// });
 
 console.log(mango.login); // Mango
 mango.login = "Mangodoge";
 console.log(mango.login); // Mangodoge
 
-const poly = new User({
-  login: "Poly",
-  email: "poly@mail.com",
-});
+// const poly = new User({
+//   login: "Poly",
+//   email: "poly@mail.com",
+// });
 
 console.log(poly.login); // Poly
 poly.login = "Polycutie";
@@ -303,3 +303,26 @@ storage.removeItem("🍋");
 
 storage.removeItem("🍇");
 console.table(storage.items); // [ '🍎', '🍑', '🍌' ]
+
+const dog = {
+  name: "Mango",
+  age: 3,
+  isGoodBoy: true,
+  bark() {
+    console.log("Woof!");
+  },
+};
+
+const json = JSON.stringify(dog);
+console.log(json); // '{"name":"Mango","age":3,"isGoodBoy":true}'
+
+console.log(JSON.parse("5")); // 5
+console.log(JSON.parse("false")); // false
+console.log(JSON.parse("null")); // null
+
+const json = '{"name":"Mango","age":3,"isGoodBoy":true}';
+
+const dog = JSON.parse(json);
+console.log(dog); // {name: "Mango", age: 3, isGoodBoy: true}
+console.log(dog.name); // "Mango"
+

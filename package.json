@@ -1,0 +1,17 @@
+{
+  "name": "my-best-pr",
+  "version": "1.0.0",
+  "description": "My project",
+  "main": "index.js",
+  "scripts": {
+    "start":"Hello start",
+    "sayHallo": "echo Hello world Al Pachino",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aleks",
+  "license": "ISC",
+  "dependencies": {
+    "basiclightbox": "^5.0.4",
+    "simplelightbox": "^2.14.2"
+  }
+}
